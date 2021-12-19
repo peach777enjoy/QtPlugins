@@ -1,0 +1,12 @@
+#ifndef ECHOPLUGIN_GLOBAL_H
+#define ECHOPLUGIN_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(ECHOPLUGIN_LIBRARY)
+#  define ECHOPLUGIN_EXPORT Q_DECL_EXPORT
+#else
+#  define ECHOPLUGIN_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // ECHOPLUGIN_GLOBAL_H

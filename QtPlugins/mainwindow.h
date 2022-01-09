@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 #include "echointerface.h"
+#include "PluginManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,13 +19,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    bool loadPlugin();
-
 private slots:
     void on_pushButton_clicked();
+
+    void on_btnEchoSend_clicked();
+
+    void on_btnTestMsgSend_clicked();
 
 private:
     Ui::MainWindow *ui;
     EchoInterface * m_echoInterface;
+    PluginManager * m_pluginManager;
 };
 #endif // MAINWINDOW_H

@@ -1,2 +1,2 @@
 TEMPLATE = subdirs
-SUBDIRS = QtPlugins EchoPlugin
+SUBDIRS = QtPlugins EchoPlugin TestMsgPlugin

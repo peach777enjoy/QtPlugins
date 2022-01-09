@@ -6,7 +6,7 @@ TEMPLATE = lib
 DEFINES += ECHOPLUGIN_LIBRARY
 
 CONFIG += c++11
-
+CONFIG += plugin
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -23,7 +23,6 @@ SOURCES += \
 
 HEADERS += \
     EchoPlugin_global.h \
-    echointerface.h \
     echoplugin.h
 
 # Default rules for deployment.
@@ -33,4 +32,6 @@ unix {
 !isEmpty(target.path): INSTALLS += target
 
 
-DESTDIR = ../QtPlugins/bin/Plugins
+DESTDIR = ../../QtPlugins/bin/Plugins
+
+INCLUDEPATH = ../QtPlugins
